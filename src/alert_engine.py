@@ -179,25 +179,6 @@ class RepeatVehicleRule(AlertRule):
         return None
 
 
-class CriticalAIRule(AlertRule):
-    """Pass-through: if Claude rated this CRITICAL, escalate regardless of other rules."""
-    name = "CriticalAIRule"
-    default_severity = "CRITICAL"
-
-    def evaluate(self, result: AnalysisResult, ctx: RuleContext) -> Optional[Alert]:
-        if result.risk_level == "CRITICAL" and result.alert_text:
-            return Alert(
-                alert_id=str(uuid.uuid4())[:8],
-                frame_id=result.frame_id,
-                timestamp=result.timestamp,
-                location=result.location,
-                severity="CRITICAL",
-                rule_triggered=self.name,
-                message=f"[AI CRITICAL] {result.alert_text}",
-            )
-        return None
-
-
 class UnidentifiedNightPersonRule(AlertRule):
     name = "UnidentifiedNightPersonRule"
     default_severity = "HIGH"
@@ -235,7 +216,6 @@ class AlertEngine:
     def __init__(self):
         self._rules: List[AlertRule] = [
             FenceIntrusionRule(),       # highest priority first
-            CriticalAIRule(),
             LoiteringRule(),
             NightTimeActivityRule(),
             AfterHoursAccessRule(),

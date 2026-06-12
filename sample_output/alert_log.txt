@@ -1,0 +1,34 @@
+=== DRONE SECURITY ANALYST — ALERT LOG ===
+
+[00:01] [CRITICAL] Main Gate | LoiteringRule
+  → [LOITERING] Person loitering at Main Gate, 00:01. Review footage immediately.
+[00:01] [HIGH    ] Main Gate | NightTimeActivityRule
+  → [NIGHT ACTIVITY] Activity detected after hours at Main Gate, 00:01. Dark vehicle, person observed at Main Gate at 00:01.
+[00:08] [CRITICAL] Main Gate | LoiteringRule
+  → [LOITERING] Person loitering at Main Gate, 00:08. Review footage immediately.
+[00:08] [HIGH    ] Main Gate | NightTimeActivityRule
+  → [NIGHT ACTIVITY] Activity detected after hours at Main Gate, 00:08. Person observed at Main Gate at 00:08.
+[02:30] [CRITICAL] Perimeter Fence - NE Corner | FenceIntrusionRule
+  → [INTRUSION CRITICAL] Perimeter fence breach at Perimeter Fence - NE Corner, 02:30. Dispatch security immediately.
+[02:30] [HIGH    ] Perimeter Fence - NE Corner | NightTimeActivityRule
+  → [NIGHT ACTIVITY] Activity detected after hours at Perimeter Fence - NE Corner, 02:30. Person observed at Perimeter Fence - NE Corner at 02:30.
+[02:30] [HIGH    ] Perimeter Fence - NE Corner | UnidentifiedNightPersonRule
+  → [UNIDENTIFIED] Person without visible ID badge detected at night — Perimeter Fence - NE Corner, 02:30.
+[12:00] [MEDIUM  ] North Garage | RepeatVehicleRule
+  → [REPEAT VEHICLE] 'Blue Ford F150' has been observed 3 times today. Last seen at North Garage, 12:00. Verify vehicle authorization.
+[12:47] [MEDIUM  ] Main Gate | RepeatVehicleRule
+  → [REPEAT VEHICLE] 'Blue Ford F150' has been observed 4 times today. Last seen at Main Gate, 12:47. Verify vehicle authorization.
+[17:30] [MEDIUM  ] Main Gate | RepeatVehicleRule
+  → [REPEAT VEHICLE] 'Blue Ford F150' has been observed 5 times today. Last seen at Main Gate, 17:30. Verify vehicle authorization.
+[19:30] [HIGH    ] North Garage | LoiteringRule
+  → [LOITERING] Person loitering at North Garage, 19:30. Review footage immediately.
+[19:30] [HIGH    ] North Garage | AfterHoursAccessRule
+  → [ACCESS ATTEMPT] Unauthorized access attempt at North Garage, 19:30.
+[19:30] [MEDIUM  ] North Garage | RepeatVehicleRule
+  → [REPEAT VEHICLE] 'Blue Ford F150' has been observed 6 times today. Last seen at North Garage, 19:30. Verify vehicle authorization.
+[22:10] [HIGH    ] Loading Dock | NightTimeActivityRule
+  → [NIGHT ACTIVITY] Activity detected after hours at Loading Dock, 22:10. Dark vehicle, person observed at Loading Dock at 22:10.
+[22:10] [HIGH    ] Loading Dock | AfterHoursAccessRule
+  → [ACCESS ATTEMPT] Unauthorized access attempt at Loading Dock, 22:10.
+[23:58] [HIGH    ] Perimeter Fence - NE Corner | NightTimeActivityRule
+  → [NIGHT ACTIVITY] Activity detected after hours at Perimeter Fence - NE Corner, 23:58. Vehicle, person observed at Perimeter Fence - NE Corner at 23:58.

@@ -1,0 +1,90 @@
+## Daily Security Report — June 12, 2026
+
+### Executive Summary
+Drone monitoring captured 14 frames over the 24-hour period. 16 alert(s) were triggered, including 3 CRITICAL and 9 HIGH severity events.
+
+### Alerts Fired
+  [CRITICAL] 00:01 — Main Gate
+    Rule: LoiteringRule
+    [LOITERING] Person loitering at Main Gate, 00:01. Review footage immediately.
+
+  [HIGH] 00:01 — Main Gate
+    Rule: NightTimeActivityRule
+    [NIGHT ACTIVITY] Activity detected after hours at Main Gate, 00:01. Dark vehicle, person observed at Main Gate at 00:01.
+
+  [CRITICAL] 00:08 — Main Gate
+    Rule: LoiteringRule
+    [LOITERING] Person loitering at Main Gate, 00:08. Review footage immediately.
+
+  [HIGH] 00:08 — Main Gate
+    Rule: NightTimeActivityRule
+    [NIGHT ACTIVITY] Activity detected after hours at Main Gate, 00:08. Person observed at Main Gate at 00:08.
+
+  [CRITICAL] 02:30 — Perimeter Fence - NE Corner
+    Rule: FenceIntrusionRule
+    [INTRUSION CRITICAL] Perimeter fence breach at Perimeter Fence - NE Corner, 02:30. Dispatch security immediately.
+
+  [HIGH] 02:30 — Perimeter Fence - NE Corner
+    Rule: NightTimeActivityRule
+    [NIGHT ACTIVITY] Activity detected after hours at Perimeter Fence - NE Corner, 02:30. Person observed at Perimeter Fence - NE Corner at 02:30.
+
+  [HIGH] 02:30 — Perimeter Fence - NE Corner
+    Rule: UnidentifiedNightPersonRule
+    [UNIDENTIFIED] Person without visible ID badge detected at night — Perimeter Fence - NE Corner, 02:30.
+
+  [MEDIUM] 12:00 — North Garage
+    Rule: RepeatVehicleRule
+    [REPEAT VEHICLE] 'Blue Ford F150' has been observed 3 times today. Last seen at North Garage, 12:00. Verify vehicle authorization.
+
+  [MEDIUM] 12:47 — Main Gate
+    Rule: RepeatVehicleRule
+    [REPEAT VEHICLE] 'Blue Ford F150' has been observed 4 times today. Last seen at Main Gate, 12:47. Verify vehicle authorization.
+
+  [MEDIUM] 17:30 — Main Gate
+    Rule: RepeatVehicleRule
+    [REPEAT VEHICLE] 'Blue Ford F150' has been observed 5 times today. Last seen at Main Gate, 17:30. Verify vehicle authorization.
+
+  [HIGH] 19:30 — North Garage
+    Rule: LoiteringRule
+    [LOITERING] Person loitering at North Garage, 19:30. Review footage immediately.
+
+  [HIGH] 19:30 — North Garage
+    Rule: AfterHoursAccessRule
+    [ACCESS ATTEMPT] Unauthorized access attempt at North Garage, 19:30.
+
+  [MEDIUM] 19:30 — North Garage
+    Rule: RepeatVehicleRule
+    [REPEAT VEHICLE] 'Blue Ford F150' has been observed 6 times today. Last seen at North Garage, 19:30. Verify vehicle authorization.
+
+  [HIGH] 22:10 — Loading Dock
+    Rule: NightTimeActivityRule
+    [NIGHT ACTIVITY] Activity detected after hours at Loading Dock, 22:10. Dark vehicle, person observed at Loading Dock at 22:10.
+
+  [HIGH] 22:10 — Loading Dock
+    Rule: AfterHoursAccessRule
+    [ACCESS ATTEMPT] Unauthorized access attempt at Loading Dock, 22:10.
+
+  [HIGH] 23:58 — Perimeter Fence - NE Corner
+    Rule: NightTimeActivityRule
+    [NIGHT ACTIVITY] Activity detected after hours at Perimeter Fence - NE Corner, 23:58. Vehicle, person observed at Perimeter Fence - NE Corner at 23:58.
+
+### Vehicle Activity
+  Blue Ford F150: 6 appearance(s) at 08:30, 09:15, 12:00, 12:47, 17:30, 19:30 — Main Gate → North Parking Lot → North Garage → Main Gate → Main Gate → North Garage
+  Dark: 2 appearance(s) at 00:01, 22:10 — Main Gate → Loading Dock
+  White Ford Transit: 2 appearance(s) at 06:45, 07:15 — Service Entrance → Service Entrance
+
+### Frame Log
+  [00:01] [HIGH    ] Main Gate: Dark vehicle, person observed at Main Gate at 00:01.
+  [00:08] [HIGH    ] Main Gate: Person observed at Main Gate at 00:08.
+  [02:30] [CRITICAL] Perimeter Fence - NE Corner: Person observed at Perimeter Fence - NE Corner at 02:30.
+  [06:45] [LOW     ] Service Entrance: White truck, person observed at Service Entrance at 06:45.
+  [07:15] [LOW     ] Service Entrance: White truck observed at Service Entrance at 07:15.
+  [08:30] [LOW     ] Main Gate: Blue truck, person observed at Main Gate at 08:30.
+  [09:15] [LOW     ] North Parking Lot: Blue truck, person observed at North Parking Lot at 09:15.
+  [12:00] [LOW     ] North Garage: Blue truck, person observed at North Garage at 12:00.
+  [12:47] [LOW     ] Main Gate: Blue truck, person observed at Main Gate at 12:47.
+  [14:20] [LOW     ] East Courtyard: Person observed at East Courtyard at 14:20.
+  [17:30] [LOW     ] Main Gate: Blue truck observed at Main Gate at 17:30.
+  [19:30] [LOW     ] North Garage: Blue vehicle, person observed at North Garage at 19:30.
+  [22:10] [HIGH    ] Loading Dock: Dark vehicle, person observed at Loading Dock at 22:10.
+  [23:58] [CRITICAL] Perimeter Fence - NE Corner: Vehicle, person observed at Perimeter Fence - NE Corner at 23:58.

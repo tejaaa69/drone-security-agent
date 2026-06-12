@@ -1,0 +1,16 @@
+=== DRONE SECURITY ANALYST — EVENT LOG ===
+
+[00:01] [HIGH    ] Main Gate — Dark vehicle, person observed at Main Gate at 00:01.
+[00:08] [HIGH    ] Main Gate — Person observed at Main Gate at 00:08.
+[02:30] [CRITICAL] Perimeter Fence - NE Corner — Person observed at Perimeter Fence - NE Corner at 02:30.
+[06:45] [LOW     ] Service Entrance — White truck, person observed at Service Entrance at 06:45.
+[07:15] [LOW     ] Service Entrance — White truck observed at Service Entrance at 07:15.
+[08:30] [LOW     ] Main Gate — Blue truck, person observed at Main Gate at 08:30.
+[09:15] [LOW     ] North Parking Lot — Blue truck, person observed at North Parking Lot at 09:15.
+[12:00] [LOW     ] North Garage — Blue truck, person observed at North Garage at 12:00.
+[12:47] [LOW     ] Main Gate — Blue truck, person observed at Main Gate at 12:47.
+[14:20] [LOW     ] East Courtyard — Person observed at East Courtyard at 14:20.
+[17:30] [LOW     ] Main Gate — Blue truck observed at Main Gate at 17:30.
+[19:30] [LOW     ] North Garage — Blue vehicle, person observed at North Garage at 19:30.
+[22:10] [HIGH    ] Loading Dock — Dark vehicle, person observed at Loading Dock at 22:10.
+[23:58] [CRITICAL] Perimeter Fence - NE Corner — Vehicle, person observed at Perimeter Fence - NE Corner at 23:58.

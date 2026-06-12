@@ -29,7 +29,12 @@ import os
 import re
 from typing import Optional
 
-import anthropic
+try:
+    import anthropic
+except ImportError:
+    anthropic = None
+
+#import anthropic
 
 from event_bus import RawFrameEvent, AnalysisResult
 
@@ -84,20 +89,21 @@ def _parse_claude_json(raw: str) -> dict:
         raise ValueError(f"No JSON object found in response: {raw[:200]}")
     return json.loads(cleaned[start:end])
 
-
 async def analyze_frame(
     event: RawFrameEvent,
-    client: Optional[anthropic.Anthropic] = None,
+    # 1. Update the type hint to AsyncAnthropic
+    client: Optional[anthropic.AsyncAnthropic] = None,
 ) -> AnalysisResult:
-    """
-    Send a frame to Claude for AI analysis.
-    Returns a fully structured AnalysisResult.
-
-    This is the AI-generated component — Claude performs object detection,
-    attribute extraction, and risk assessment from natural-language frame descriptions.
-    """
+    
+    if anthropic is None:
+        raise ImportError(
+            "The 'anthropic' library is not installed. "
+            "Install it with: pip install anthropic\n"
+            "Or run the pipeline in --mock mode."
+        )
     if client is None:
-        client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
+        # 2. Change Anthropic to AsyncAnthropic
+        client = anthropic.AsyncAnthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
 
     user_prompt = f"""Analyze this security camera frame:
 
@@ -113,7 +119,8 @@ TELEMETRY CONTEXT:
 
 Return your analysis as JSON."""
 
-    response = client.messages.create(
+    # 3. Add 'await' right here before the client call
+    response = await client.messages.create(
         model="claude-sonnet-4-20250514",
         max_tokens=1000,
         system=SYSTEM_PROMPT,
